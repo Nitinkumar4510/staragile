@@ -2,12 +2,6 @@ pipeline {
     agent { label 'slave' }
 
     stages {
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/Nitinkumar4510/staragile.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-app-image .'
